@@ -87,14 +87,30 @@ section {
     display: flex;
     align-items: center;
     padding: 0 9%;
-    background: url('/images/home.jpg') no-repeat;
-    background-size: cover;
-    background-position: center;
+    background: none; /* Remove any background image */
+    position: relative;
+}
+
+.home-img {
+    width: 30%;            /* Smaller width for a more compact photo */
+    height: auto;
+    aspect-ratio: 1 / 1;   /* Keep square shape */
+    background: url('images/profile.png') no-repeat center center;
+    background-size: cover; /* Cover fills container nicely */
+    border: 0.4rem solid var(--main-color);
+    border-radius: 1rem;
+    margin-right: 3rem;    /* Reduced margin for better spacing */
+    flex-shrink: 0;
 }
 
 .home-content {
-    max-width: 60rem;
+    padding-left: 90px;
+    justify-content: center;
     z-index: 99;
+}
+
+.home-content p {
+    text-align: justify;
 }
 
 .home-content h1 {
@@ -545,7 +561,7 @@ span {
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(1) .bar span {
-    width: 95%;
+    width: 100%;
 }
 
 .skills-column:nth-child(2) .skills-content .progress:nth-child(2) .bar span {
@@ -560,6 +576,9 @@ span {
     width: 60%;
 }
 
+.project{
+    background: var(--second-bg-color);
+}
 .contact {
     min-height: auto;
     padding-bottom: 7rem;
